@@ -1,0 +1,37 @@
+@import "./variables";
+@import "./mixin";
+#op-promo {
+  margin-top: 120px;
+
+  .container {
+    @include tgdd-container(1200px, 0);
+    ul {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        width: 384px;
+        height: 100px;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          @include color-body-text($color-text);
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            height: 70px;
+          }
+          span {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+}

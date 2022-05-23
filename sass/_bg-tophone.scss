@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./mixin";
+#bg-tophone {
+  .container {
+    max-width: 1200px;
+    padding: 0;
+    height: 0;
+    .home-slider {
+      position: relative;
+      top: -105px;
+      z-index: 1;
+      .slider-banner {
+        .item {
+          img {
+            width: 595px;
+            height: 180px;
+            border-radius: 12px;
+          }
+        }
+        .owl-nav {
+          button {
+            width: 44px;
+            height: 44px;
+            opacity: 0.7;
+            background-color: #fff;
+            filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.15));
+            border-radius: 50%;
+            font-size: 30px;
+            color: #666;
+          }
+          .owl-prev {
+            position: absolute;
+            left: -28px;
+            top: 74px;
+          }
+          .owl-next {
+            position: absolute;
+            right: -28px;
+            top: 74px;
+          }
+        }
+      }
+    }
+  }
+}

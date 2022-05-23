@@ -1,0 +1,197 @@
+@import "./variables";
+@import "./mixin";
+#header {
+  background-color: $color-primary;
+
+  // height: 113px;
+  @include color-body-text($color-text);
+  .container {
+    max-width: 1220px;
+    .header-top {
+      padding-top: 10px;
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: space-between;
+      .header-top__logo {
+        i {
+          @include tgdd-img;
+          background-position: 0 -176px;
+          width: 228px;
+          height: 40px;
+          line-height: 30px;
+
+          background-size: 310px 257px;
+        }
+      }
+      .header-top__address {
+        width: 137px;
+        height: 2.375rem;
+        text-decoration: none;
+        font-size: $text-xxs;
+        @include header-menu-bg($color-bg);
+        @include color-body-text($color-text);
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 4px 0 4px 10px;
+        border-radius: 4px;
+        position: relative;
+        span {
+          font-weight: $font-bold;
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            position: absolute;
+            right: 8px;
+          }
+        }
+      }
+      form {
+        position: relative;
+        input {
+          width: 266px;
+          height: 40px;
+          outline: none;
+          border: none;
+          border-radius: 4px;
+          padding-left: 13px;
+          font-size: $color-text;
+          font-size: $text-xs;
+        }
+        button {
+          position: absolute;
+          right: 10px;
+          top: 7px;
+          background-color: transparent;
+          border: none;
+          i {
+            @include tgdd-img;
+            line-height: 30px;
+
+            background-size: 300px 200px;
+            background-position: -104px 0;
+            height: 17px;
+            width: 17px;
+          }
+        }
+      }
+      .name-order {
+        width: 95px;
+        height: 40px;
+        @include color-body-text($color-text);
+        text-decoration: none;
+        @include header-menu-bg($color-bg);
+        font-size: $text-xs;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 14px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: $text-xs;
+        line-height: $text-sm;
+      }
+      .header-top__cart {
+        @include color-body-text($color-text);
+        @include header-menu-bg($color-bg);
+        font-weight: $font-bold;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        width: 101px;
+        padding: 8px 10px;
+        justify-content: center;
+        border-radius: 4px;
+        i {
+          @include tgdd-img;
+          background-position: -50px 0;
+          width: 25px;
+          height: 24px;
+          background-size: 310px 257px;
+          margin-right: 8px;
+        }
+      }
+      .header-top__listtop {
+        display: flex;
+        align-items: center;
+
+        height: 40px;
+        text-decoration: none;
+        width: 248px;
+        justify-content: space-between;
+        .divitem {
+          text-align: center;
+          a {
+            @include color-body-text($color-text);
+            font-size: $text-sm;
+          }
+        }
+        .bordercol {
+          background-color: #ffe56c;
+          height: 32px;
+          width: 1px;
+        }
+      }
+    }
+    .header-main {
+      height: 53px;
+      margin-top: 4px;
+      ul {
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        height: 100%;
+        li {
+          position: relative;
+          a {
+            @include color-body-text($color-text);
+            font-size: $text-sm;
+            font-weight: $font-normal;
+            display: flex;
+            align-items: center;
+            span {
+              padding-right: 20px;
+            }
+            i {
+              margin-right: 5px;
+              img {
+                height: 20px;
+                width: auto;
+                object-fit: cover;
+                vertical-align: middle;
+              }
+            }
+            .triangle::after {
+              position: absolute;
+              content: "";
+              @include tgdd-triangle(6px, #000);
+              // right: -16px;
+              top: 9px;
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#banner {
+  height: 493px;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  overflow: hidden;
+  img {
+    height: 100%;
+  }
+}

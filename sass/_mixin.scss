@@ -1,0 +1,26 @@
+@mixin color-body-text($color) {
+  color: $color;
+  font-size: $text-xs;
+  text-decoration: none;
+}
+@mixin header-menu-bg($bg-color) {
+  background-color: $bg-color;
+}
+@mixin tgdd-img {
+  background-image: url(//cdn.tgdd.vn/mwgcart/mwg-site/ContentMwg/images/homev2/desk/iconnew.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+@mixin tgdd-triangle($width, $color) {
+  width: 0;
+  height: 0;
+  border-left: $width solid transparent;
+  border-right: $width solid transparent;
+  border-top: $width solid $color;
+}
+
+@mixin tgdd-container($max-width, $padding) {
+  max-width: $max-width;
+  padding: $padding;
+}

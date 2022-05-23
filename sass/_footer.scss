@@ -1,0 +1,32 @@
+@import "./variables";
+@import "./mixin";
+#footer {
+  background-color: #fff;
+  border-top: 1px solid #e2e2e2;
+  padding-top: 10px;
+  .container {
+    @include tgdd-container(1200px, 0);
+    .footer-top {
+      .row {
+        .col {
+          ul {
+            text-align: center;
+            padding: 0;
+            list-style-type: none;
+            li {
+              margin-bottom: 10px;
+              a {
+                @include color-body-text($color-text);
+                font-size: 14px;
+                span {
+                  font-weight: $font-bold;
+                  color: $color-fourth;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

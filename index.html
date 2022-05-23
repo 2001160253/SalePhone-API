@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Project JS - API</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="header-top">
+          <a href="#" class="header-top__logo"> <i></i> </a>
+          <a href class="header-top__address">
+            Xem giá, tồn kho tại<br />
+            <span>Hồ Chí Minh</span>
+          </a>
+          <form action="#">
+            <input type="text" placeholder="Bạn tìm gì..." />
+            <button type="submit">
+              <i></i>
+            </button>
+          </form>
+          <a href="#" class="name-order">Lịch sử đơn hàng</a>
+          <a href="#" class="header-top__cart"><i></i>Giỏ hàng</a>
+          <div class="header-top__listtop">
+            <div class="divitem">
+              <a href="#"
+                >24h <br />
+                Công nghệ</a
+              >
+            </div>
+            <div class="bordercol"></div>
+            <div class="divitem">
+              <a href="#">Hỏi đáp</a>
+            </div>
+            <div class="bordercol"></div>
+            <div class="divitem">
+              <a href="#">Game app</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-main">
+          <ul>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-phone-96x96-2.png"
+                    alt=""
+                  />
+                </i>
+                <span>Điện thoại</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-laptop-96x96-1.png"
+                    alt=""
+                  />
+                </i>
+                <span>Laptop</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-tablet-96x96-1.png"
+                    alt=""
+                  />
+                </i>
+                <span>Máy tính bảng</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-phu-kien-96x96-1.png"
+                    alt=""
+                  />
+                </i>
+                <span class="triangle">Phụ kiện</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-avaji-96x96-1.png"
+                    alt=""
+                  />
+                </i>
+                <span class="triangle">AVAJi</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i>
+                  <img
+                    src="https://cdn.tgdd.vn//content/icon-pc-96x96.png"
+                    alt=""
+                  />
+                </i>
+                <span class="triangle">PC, Máy in</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i> </i>
+                <span>Máy cũ giá rẻ</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i> </i>
+                <span>Sim, thẻ cào</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i> </i>
+                <span class="triangle">Dịch vụ tiện ích</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="banner">
+      <a href="#">
+        <img
+          src="https://cdn.tgdd.vn/2022/05/banner/TGDDDesk1920x450-15-op-1920x450-1.png"
+          alt=""
+        />
+      </a>
+    </section>
+
+    <main>
+      <section id="bg-tophone">
+        <div class="container">
+          <div class="home-slider">
+            <div class="slider-banner owl-carousel owl-theme">
+              <div class="item">
+                <img
+                  src="https://cdn.tgdd.vn/2022/05/banner/720-220-720x220-157.png"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.tgdd.vn/2022/05/banner/720-220-720x220-187.png"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.tgdd.vn/2022/05/banner/720-220-720x220-179.png"
+                  alt=""
+                />
+              </div>
+              <div class="item">
+                <img
+                  src="https://cdn.tgdd.vn/2022/05/banner/flip3-720-220-720x220.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="op-promo">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="#">
+                <img
+                  src="https://cdn.tgdd.vn//content/Frame46553-80x92.png"
+                  alt=""
+                />
+                <span>Chỉ giảm online</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://cdn.tgdd.vn//content/Frame46555-85x86-1.png"
+                  alt=""
+                />
+                <span>Đồng giá từ 99K</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="https://cdn.tgdd.vn//content/Frame46554-81x85-1.png"
+                  alt=""
+                />
+                <span> Xả hàng giảm sốc </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="content">
+        <div class="container">
+          <div class="content-header">Deal ngon mỗi ngày</div>
+          <div class="content-banner">
+            <div class="item">
+              <img
+                src="https://cdn.tgdd.vn/2022/05/banner/Desktop380x200-380x200-13.png"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                src="https://cdn.tgdd.vn/2022/05/banner/Desktop380x200(2)-380x200-1.png"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                src="https://cdn.tgdd.vn/2022/05/banner/Desktop380x200-1-380x200-11.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="filter">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Filter by</option>
+              <option value="1">Phone</option>
+              <option value="2">Laptop</option>
+            </select>
+          </div>
+          <div class="content-product">
+            <div class="row">
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+              <div class="col col-lg-3">
+                <div class="item">1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="row">
+            <div class="col-lg-4 col">
+              <ul>
+                <li><a href="#"> Lịch sử mua hàng </a></li>
+                <li><a href="#">Cộng tác bán hàng tại TGDD</a></li>
+                <li><a href="#">Tìm hiểu về mua trả góp</a></li>
+                <li><a href="#">Chính sách bảo hành</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col">
+              <ul>
+                <li><a href="#">Giới thiệu công ty</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Gửi góp ý, khiếu nại</a></li>
+                <li><a href="#">Tìm siêu thị</a></li>
+                <li><a href="#">Xem bản mobile</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col">
+              <ul>
+                <li>
+                  <a href="#" style="font-weight: bold">Tổng đài hỗ trợ</a>
+                </li>
+                <li>
+                  <a href="#">Gọi mua: <span>1800.199.00</span></a>
+                </li>
+                <li>
+                  <a href="#">Kỹ thuật: <span>1800.199.00</span></a>
+                </li>
+                <li>
+                  <a href="#">Khiếu nại: <span>1800.199.00</span> </a>
+                </li>
+                <li>
+                  <a href="#">Bảo hành: <span>1800.199.00</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider-banner").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          dots: false,
+          autoplay: true,
+          autoplayTimeout: 3000,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 2,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

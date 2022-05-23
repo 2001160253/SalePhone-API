@@ -1,0 +1,14 @@
+@import "./header";
+@import "./bg-tophone";
+@import "./op-promo";
+@import "./content";
+@import "./footer";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background-color: $color-bg-main;
+}
