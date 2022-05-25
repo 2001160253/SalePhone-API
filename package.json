@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "capstoneproject-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2001160253/CapstoneProject-JS-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2001160253/CapstoneProject-JS-API/issues"
+  },
+  "homepage": "https://github.com/2001160253/CapstoneProject-JS-API#readme"
+}
