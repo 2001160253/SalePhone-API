@@ -22,24 +22,4 @@ export class Product {
     this.id = id;
     this.quality = quality;
   }
-
-  total() {}
-
-  renderMain() {
-    return ` <div class="col col-lg-3">
-        <div class="item">
-          <img
-            src=${this.img}
-            alt="img"
-          />
-          <div class="item-content">
-            <h1 class="name">${this.name}</h1>
-            <p class="price">${this.price} vnđ</p>
-            <p class="sale"> 
-            Còn 10/10 suất</p>
-          </div>
-        </div>
-        </div>
-`;
-  }
 }
