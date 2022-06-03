@@ -3,23 +3,23 @@ export class Product {
     name,
     price,
     screen,
-    backcamera,
-    frontcamera,
+    backCamera,
+    frontCamera,
     img,
     desc,
     type,
     id,
-    quality
+    quantity
   ) {
     this.name = name;
     this.price = price;
     this.screen = screen;
-    this.backcamera = backcamera;
-    this.frontcamera = frontcamera;
+    this.backCamera = backCamera;
+    this.frontCamera = frontCamera;
     this.img = img;
     this.desc = desc;
     this.type = type;
     this.id = id;
-    this.quality = quality;
+    this.quantity = quantity;
   }
 }

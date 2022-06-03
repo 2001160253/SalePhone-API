@@ -55,7 +55,7 @@
             </button>
           </form>
           <a href="#" class="name-order">Lịch sử đơn hàng</a>
-          <a href="#" class="header-top__cart"><i></i>Giỏ hàng</a>
+          <a href="./cart.html" class="header-top__cart"><i></i>Giỏ hàng</a>
           <div class="header-top__listtop">
             <div class="divitem">
               <a href="#"
@@ -281,20 +281,26 @@
     </main>
     <div class="cart" id="cart-content" style="display: block">
       <div class="container">
-        <table>
-          <thead>
-            <th>Hình ảnh</th>
-            <th>Sản phẩm</th>
-            <th>Giá</th>
-            <th>Số lượng</th>
-            <th>Tổng cộng</th>
-            <th></th>
-          </thead>
-          <tbody class="table-content"></tbody>
-        </table>
-        <div class="sumMoney">
-          <span>Tổng tiền: <span class="sum" id="sum"></span></span>
-          <button>Thanh Toán</button>
+        <h1 class="heading-cart">
+          Giỏ hàng
+        </h1>
+        <div class="cart-main">
+          <table style="width: 100%">
+            <!-- <thead>
+              <th>Hình ảnh</th>
+              <th>Sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Tổng cộng</th>
+              <th></th>
+            </thead> -->
+            <tbody class="table-content"></tbody>
+          </table>
+          <div class="purchase">
+            <span>Tổng tiền: <span id="totalPrice"></span></span>
+            <button class="pay">Thanh Toán</button>
+          </div>
+          
         </div>
       </div>
     </div>

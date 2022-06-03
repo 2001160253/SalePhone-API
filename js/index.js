@@ -36,10 +36,9 @@ const mapProduct = (data) => {
       item.desc,
       item.type,
       item.id,
-      item.quality
+      item.quantity
     );
   });
-  console.log(result)
   return result;
 };
 
@@ -70,30 +69,26 @@ const renderProduct = (data) => {
   let handleClick = document.querySelectorAll(".btnAddCart");
   data.forEach((item, index) => {
     handleClick[index].addEventListener("click", () => {
-      console.log("Cki");
       addCart(item);
-   
     });
   });
 };
 
-
 const addCart = (product) => {
-  console.log("add cart parameter")
-  console.log(product)
-  console.log("product cart parameter")
-  console.log(productCart)
-  if (product.name) {
+  if (product.quantity > 0) {
     const index = productCart.findIndex((item) => {
       return Number(item.product.id) === Number(product.id);
     });
+
     if (index !== -1) {
-      productCart[index].quality += 1;
+      productCart[index].quantity += 1;
     } else {
-      productCart = [...productCart, { product, quality: 1 }];
+      productCart = [...productCart, { product, quantity: 1 }];
     }
+
     renderCart(productCart);
   }
+  saveCart();
 };
 
 const renderCart = (data) => {
@@ -102,20 +97,86 @@ const renderCart = (data) => {
 
     for (let item of data) {
       cartHTML += `
-      <tr>
-        <td>
-          <img width="50px" height="50px" src=${item.product.img} alt=${item.product.name} />
-        </td>
-        <td>${item.product.name}</td>
-        <td>${item.product.price}</td>
-        <td>123<td>
-      </tr>
+      <tr class="item">
+      <td class="item-img">
+        <img src=${item.product.img} alt=${item.product.name} />
+      </td>
+      <td class="item-name">${item.product.name}</td>
+      <td style="width: calc(100%/8); font-size:15px">${numberWithCommas(item.product.price)}</td>
+      <td class="item-quantity">
+        <button class=" decreaseQuantity">-</button>
+        <span> ${item.quantity}</span>
+        <button class="ascendingQuantity">+</button>
+      </td>
+      <td class="item-price">${numberWithCommas(item.product.price * item.quantity)}</td>
+      <td><button class="item-delete deleteProduct">X</button></td>
+    </tr>
       `;
     }
     document.querySelector(".table-content").innerHTML = cartHTML;
-    console.log("ok");
+
+    let deleteItem = document.querySelectorAll(".deleteProduct");
+    let ascendingItem = document.querySelectorAll(".ascendingQuantity");
+    let decreaseItem = document.querySelectorAll(".decreaseQuantity");
+    const total = productCart.reduce((total, item) => {
+      return total + item.quantity * item.product.price;
+    }, 0);
+    const formatTotal=numberWithCommas(total)
+    document.querySelector("#totalPrice").innerHTML = formatTotal;
+
+    productCart.forEach((item, index) => {
+      deleteItem[index].addEventListener("click", () => {
+        deleteProduct(item.product.id);
+      });
+      ascendingItem[index].addEventListener("click", () => {
+        ascendingQuantity(item.product.id, 1);
+      });
+      decreaseItem[index].addEventListener("click", () => {
+        decreaseQuantity(item.product.id, 1);
+      });
+    });
   }
+  saveCart();
 };
+//decreaseQuantity
+const decreaseQuantity = (id, value) => {
+  const product = productCart.map((item) => {
+    if (item.product.id === id) {
+      return { product: item.product, quantity: item.quantity - value };
+    }
+    return item;
+  });
+  productCart = product;
+  renderCart(productCart);
+};
+//ascendingQuantity
+const ascendingQuantity = (id, value) => {
+  const product = productCart.map((item) => {
+    if (item.product.id === id) {
+      return { product: item.product, quantity: item.quantity + value };
+    }
+    return item;
+  });
+  productCart = product;
+  renderCart(productCart);
+};
+
+//deleteProduct
+const deleteProduct = (id) => {
+  const item = productCart.filter((item) => {
+    return item.product.id !== id;
+  });
+  productCart = item;
+  renderCart(productCart);
+  saveCart();
+};
+//pay
+let pay = document.querySelector(".pay");
+
+pay.addEventListener("click", () => {
+  productCart = [];
+  renderCart(productCart);
+});
 //filter by type
 const filterByTypeSamsung = function () {
   const vl = document.querySelector(".form-select").value;
@@ -160,3 +221,24 @@ selectProduct.addEventListener("change", () => {
     filterByTypeAll();
   }
 });
+
+//local storage
+const saveCart = () => {
+  const cartsListJSON = JSON.stringify(productCart);
+  localStorage.setItem("list", cartsListJSON);
+};
+const getCart = () => {
+  let cartsListJSON = localStorage.getItem("list");
+  cartsListJSON = JSON.parse(cartsListJSON);
+  if (cartsListJSON) {
+    productCart = cartsListJSON.map((item) => {
+      return item;
+    });
+  }
+  renderCart(productCart);
+};
+getCart();
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
