@@ -56,7 +56,7 @@ const renderProduct = (data) => {
       <div class="item-content">
         <p class="sale">Giảm kịch sàn</p>
         <h1 class="name">${item.name}</h1>
-        <p class="price">${item.price} vnđ</p>
+        <p class="price"> ${numberWithCommas( item.price)} vnđ</p>
         <button class="btnAddCart">Mua ngay</button>
       </div>
     </div>
